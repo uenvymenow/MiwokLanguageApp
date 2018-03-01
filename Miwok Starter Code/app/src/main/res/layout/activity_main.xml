@@ -21,9 +21,7 @@
     android:background="@color/tan_background"
     android:orientation="vertical"
     tools:context="com.example.android.miwok.MainActivity">
-
-    <!-- Temporary code to test VCS in Android Studio -->
-
+    
     <TextView
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
