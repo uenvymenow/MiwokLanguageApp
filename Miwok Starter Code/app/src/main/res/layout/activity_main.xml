@@ -22,6 +22,8 @@
     android:orientation="vertical"
     tools:context="com.example.android.miwok.MainActivity">
 
+    <!-- This is a test comment and can be removed -->
+
     <TextView
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
