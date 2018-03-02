@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         // Find the numbers view that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
 
-        // Set onClickListener for number TextView
+        // Set onClickListener for number TextView {@Link NumbersActivity}
         numbers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         // Find the family view that shows the family category
         TextView family = (TextView) findViewById(R.id.family);
 
-        // Set onClickListener for the family TextView
+        // Set onClickListener for the family TextView {@Link FamilyActivity}
         family.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -60,12 +60,24 @@ public class MainActivity extends AppCompatActivity {
         // Find the colors view that shows the colors category
         TextView colors = (TextView) findViewById(R.id.colors);
 
-        // Set OnClickListener for the colors TextView
+        // Set OnClickListener for the colors TextView {@Link ColorActivity}
         colors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent colorsIntent = new Intent(MainActivity.this, ColorActivity.class);
                 startActivity(colorsIntent);
+            }
+        });
+
+        // Find the phrases view that shows the phrases category
+        TextView phrases = (TextView) findViewById(R.id.phrases);
+
+        // Set OnClickListener for the phrases TextView {@Link PhrasesActivity}
+        phrases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(phrasesIntent);
             }
         });
     }
