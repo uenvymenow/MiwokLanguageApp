@@ -4,7 +4,10 @@ import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,6 +22,7 @@ public class NumbersActivity extends AppCompatActivity {
         // Create an ArrayList for the numbers
         ArrayList<String> numbersListEnglish = new ArrayList<String>();
 
+        // Add the word numbers to the ArrayList
         numbersListEnglish.add("One");
         numbersListEnglish.add("Two");
         numbersListEnglish.add("Three");
@@ -30,16 +34,14 @@ public class NumbersActivity extends AppCompatActivity {
         numbersListEnglish.add("Nine");
         numbersListEnglish.add("Ten");
 
-        // Find rootView LinearLayout from activity_numbers.xml
-        LinearLayout numbersView = findViewById(R.id.rootView);
+        // Create an ArrayAdapter referencing the NumbersActivity, the layout type of 'simple_expandable_list_item_1, and pass through the ArrayList of numbersListEnglish
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, numbersListEnglish);
 
-        // For loop that runs for each element in the numbersListEnglish ArrayList
-        for (int index = 0; index < numbersListEnglish.size(); index++) {
-            // Setup instructions to run each time through
-            TextView wordView = new TextView(this);
-            wordView.setText(numbersListEnglish.get(index));
-            numbersView.addView(wordView);
-        }
+        // Find the ListView created in the activity_main.xml file
+        ListView listView = findViewById(R.id.list);
+
+        // pass through the ArrayAdapter itemsAdapter elements to be set in the listView view
+        listView.setAdapter(itemsAdapter);
     }
 
 }
