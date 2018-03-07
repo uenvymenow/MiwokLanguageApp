@@ -1,6 +1,5 @@
 package com.example.android.miwok;
 
-import java.util.ArrayList;
 
 /**
  * Created by Aaron on 3/4/2018.
@@ -18,7 +17,10 @@ public class Word {
     private String mMiwokTranslation;
 
     /** image resource variable **/
-    private int mImageResourceID;
+    private int mImageResourceID = NO_IMAGE_PROVIDED;
+
+    /** Image resource ID for the word */
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
      * Creates two variables to hold the input parameters
@@ -59,4 +61,11 @@ public class Word {
 
     /** Get the image resource id to match the word translations **/
     public int getImageResourceID(){ return mImageResourceID; }
+
+    /**
+     * Returns whether or not there is an image for this word.
+     */
+    public boolean hasImage(){
+        return mImageResourceID != NO_IMAGE_PROVIDED;
+    }
 }
