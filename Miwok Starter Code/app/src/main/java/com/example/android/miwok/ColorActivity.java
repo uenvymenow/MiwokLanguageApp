@@ -28,7 +28,7 @@ public class ColorActivity extends AppCompatActivity {
         numbersList.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
 
         // Create an ArrayAdapter referencing the NumbersActivity, the layout type of 'simple_expandable_list_item_1, and pass through the ArrayList of numbersListEnglish
-        WordAdapter adapter = new WordAdapter(this, numbersList);
+        WordAdapter adapter = new WordAdapter(this, numbersList, R.color.category_colors);
 
         // Find the ListView created in the activity_main.xml file
         ListView listView = findViewById(R.id.list);

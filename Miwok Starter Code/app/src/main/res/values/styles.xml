@@ -30,4 +30,18 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
+
+    <!-- Style of the ImageView for translations -->
+    <style name="ImageViewStyle">
+        <item name="android:layout_height">88dp</item>
+        <item name="android:layout_width">88dp</item>
+    </style>
+
+    <!-- Style of the TextViews for translations without the colors -->
+    <style name="TranslationTextViewStyles">
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
 </resources>

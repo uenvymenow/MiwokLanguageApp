@@ -31,7 +31,7 @@ public class FamilyActivity extends AppCompatActivity {
 
 
         // Create an ArrayAdapter referencing the NumbersActivity, the layout type of 'simple_expandable_list_item_1, and pass through the ArrayList of numbersListEnglish
-        WordAdapter adapter = new WordAdapter(this, numbersList);
+        WordAdapter adapter = new WordAdapter(this, numbersList, R.color.category_family);
 
         // Find the ListView created in the activity_main.xml file
         ListView listView = findViewById(R.id.list);
